@@ -760,8 +760,8 @@ body.is-op-end {
     font-family: "Fredoka", sans-serif;
     color: #2f53e8;
     font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 0.8px;
+    font-weight: 500;
+    letter-spacing: 1px;
     margin-bottom: 8px;
 }
 
@@ -779,9 +779,9 @@ body.is-op-end {
 
 .more-button {
     display: inline-block;
-    background-color: #2f53e8;
+    background-color: #ff88f1;
     box-shadow: 0 0 0 2px #2f53e8;
-    border-radius: 60px;
+    border-radius: 100px;
     transition: transform 0.5s cubic-bezier(0.33, 1.59, 0.52, 0.94), background-color 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -792,7 +792,7 @@ body.is-op-end {
 
 .more-button-inner {
     display: block;
-    padding: 12px 60px 14px;
+    padding: 12px 13% 14px;
     text-decoration: none;
     position: relative;
 }
@@ -985,4 +985,170 @@ body.is-op-end {
 
 .pagination-arrow.disabled {
     display: none;
+}
+
+.post-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.post-page-inner {
+    padding: 40px 20px;
+}
+
+.post-page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.post-page-title img {
+    max-width: 200px;
+    height: auto;
+}
+
+.post-detail {
+    box-shadow: 0 0 0 2px #2f53e8;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #e8f9ff;
+}
+
+.post-detail-header {
+    position: relative;
+    padding: 9px 18px 11px;
+    background-color: #2f53e8;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-detail-header-title {
+    font-family: "Fredoka", sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.post-detail-header-icons {
+    display: flex;
+    gap: 5px;
+}
+
+.post-detail-header-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.post-detail-header-icon img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Content area */
+.post-detail-content {
+    padding: 22px 30px 37px;
+    line-height: 1.6;
+}
+
+.post-detail-head {
+    border-bottom: 1px solid #2f53e8;
+    margin-bottom: 25px;
+    padding-bottom: 13px;
+}
+
+.post-detail-date {
+    color: #2f53e8;
+    font-family: "Fredoka", sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 1px;
+}
+
+.post-detail-title {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Kiwi Maru", serif;
+    color: #000;
+}
+
+.post-detail-body {
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: "Kiwi Maru", serif;
+    color: #000;
+}
+
+.post-detail-body p {
+    margin-bottom: 1em;
+}
+
+.post-detail-body a {
+    color: #ff88f1;
+    letter-spacing: 1px;
+    transition: color 0.35s ease;
+}
+
+.post-detail-body a:hover {
+    text-decoration: none;
+    color: #2f53e8;
+}
+
+.post-detail-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+.post-footer {
+    margin-top: 41px;
+}
+
+.back-button {
+    width: fit-content;
+    margin: 0 auto;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+
+.back-button:hover .back-button-inner::before {
+    background-color: #f79764;
+}
+
+.back-button:hover .back-button-text {
+    color: #f79764;
+}
+
+.back-button-inner {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    padding-left: 29px;
+}
+
+/* Left arrow icon */
+.back-button-inner::before {
+    content: "←";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20px;
+    color: #2f53e8;
+    font-size: 20px;
+    transition: color 0.35s ease;
+}
+
+.back-button-text {
+    font-family: "Fredoka", sans-serif;
+    color: #2f53e8;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    transition: color 0.35s ease;
 }
