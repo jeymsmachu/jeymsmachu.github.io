@@ -1,0 +1,43 @@
+name: generate posts list
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'posts/**'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Generate posts list
+        run: |
+          cd posts
+          echo "[" > posts-list.json
+          first=true
+          for file in *.md; do
+            if [ "$file" != "*.md" ]; then
+              if [ "$first" = true ]; then
+                echo "  \"$file\"" >> posts-list.json
+                first=false
+              else
+                echo "  ,\"$file\"" >> posts-list.json
+              fi
+            fi
+          done
+          echo "]" >> posts-list.json
+          
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add posts/posts-list.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generate posts list [skip ci]" && git push)
