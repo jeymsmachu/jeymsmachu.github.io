@@ -1,6 +1,4 @@
-// lenis smooth scrolling because, again, nevermind
-
-// check if lenis loaded successfully
+// lenis smooth scrolling
 let lenis = null;
 
 // only initialize if lenis is available
@@ -12,13 +10,13 @@ if (typeof Lenis !== 'undefined') {
         direction: 'vertical'
     });
 
-    // Animation loop
+    // animation loop
     function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
     }
 
-    // Start the loop
+    // start the loop
     requestAnimationFrame(raf);
     
     console.log('lenis smooth scroll loaded woooooo');
@@ -26,29 +24,33 @@ if (typeof Lenis !== 'undefined') {
     console.warn('lenis not loaded, using default scrolling');
 }
 
-requestAnimationFrame(raf);
-
-// controller for opening animation
+// controller for opening animation (only on homepage)
 window.addEventListener('load', function() {
-    // stop smooth scrolling
-    lenis.stop();
-
-    // show loading text first
+    const hasOpening = document.querySelector('.opening');
+    
+    // always add is-ready to show loading text
     document.body.classList.add('is-ready');
+    
+    if (hasOpening && lenis) {
+        // homepage with opening animation
+        lenis.stop();
+        document.body.classList.add('is-op');
 
-    // show opening section (heart + logo)
-    this.document.body.classList.add('is-op');
+        setTimeout(function() {
+            document.body.classList.add('is-load');
+        }, 1000);
 
-    // start animation after 1 sec
-    setTimeout(function() {
-        document.body.classList.add('is-load');
-    }, 1000);
-
-    // hide opening after
-    this.setTimeout(function() {
-        document.body.classList.add('is-op-end');
-
-        // start smooth scroll
-        lenis.start();
-    }, 5500);
+        setTimeout(function() {
+            document.body.classList.add('is-op-end');
+            lenis.start();
+        }, 5500);
+    } else {
+        // other pages without opening animation - quick load
+        setTimeout(function() {
+            document.body.classList.add('is-load');
+            if (lenis) {
+                lenis.start();
+            }
+        }, 500);  // short delay to show loading
+    }
 });
