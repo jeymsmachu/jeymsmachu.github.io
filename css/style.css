@@ -721,6 +721,7 @@ body.is-op-end {
     background-color: #e8f9ff;
     box-shadow: 0 0 0 2px #2f53e8;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .blog-list-head {
@@ -753,6 +754,7 @@ body.is-op-end {
     display: block;
     padding: 4% 5% 7%;
     background-color: #e8f9ff;
+    border-radius: 0 0 5px 5px;
 }
 
 .blog-list-date {
