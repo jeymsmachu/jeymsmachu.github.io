@@ -722,3 +722,51 @@ body.is-op-end {
     box-shadow: 0 0 0 2px #2f53e8;
     border-radius: 5px;
 }
+
+.blog-list-head {
+    background-color: #2f53e8;
+    padding: 3px 9px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.blog-list-head-num {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 13px;
+}
+
+.blog-list-head-deco {
+    width: 15.5%;
+}
+
+.blog-list-head-deco img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-list-inner {
+    display: block;
+    padding: 4% 5% 7%;
+    background-color: #e8f9ff;
+}
+
+.blog-list-date {
+    font-family: "Fredoka", sans-serif;
+    color: #2f53e8;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+}
+
+.blog-list-title {
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+}
