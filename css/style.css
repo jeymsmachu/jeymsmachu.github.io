@@ -636,6 +636,12 @@ body.is-op-end {
     position: relative;
     margin-bottom: 215px;
     z-index: 2;
+    opacity: 0;
+}
+
+.is-op-end .blog {
+    opacity: 1;
+    transition: opacity 0.8s ease 0.5s;
 }
 
 .blog-inner {

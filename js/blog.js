@@ -44,6 +44,8 @@ async function loadBlogPosts() {
                 const markdown = await postResponse.text();
                 const { metadata, content } = parseFrontMatter(markdown);
                 
+                console.log('📝 Parsed post:', filename, metadata);
+                
                 return {
                     filename,
                     id: filename.replace('.md', ''),
