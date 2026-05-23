@@ -1,0 +1,19 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+
+# Node modules (if you add them later)
+node_modules/
+
+# Reference folder (keep it local)
+.nakamura-reference/
+my-site/
+temp-hero-sprites/
