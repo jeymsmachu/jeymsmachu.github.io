@@ -1,6 +1,5 @@
 // helper
-const BASE_PATH = window.location.pathname.includes('/jeymsmachu/') ? 'jeymsmachu/' : '';
-
+const BASE_PATH = window.location.pathname.includes('/jeymsmachu/') ? '/jeymsmachu/' : '/';
 
 // parse front matter from markdown
 function parseFrontMatter(markdown) {
