@@ -1,3 +1,7 @@
+// helper
+const BASE_PATH = window.location.pathname.includes('/jeymsmachu/') ? 'jeymsmachu/' : '';
+
+
 // parse front matter from markdown
 function parseFrontMatter(markdown) {
     const frontMatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
@@ -34,18 +38,18 @@ function parseFrontMatter(markdown) {
 async function loadBlogPosts() {
     try {
         // fetch the auto-generated posts list
-        const response = await fetch('posts/posts-list.json');
+        const response = await fetch(`${BASE_PATH}posts/posts-list.json`);
         const filenames = await response.json();
         
         // load each post's markdown
         const posts = await Promise.all(
             filenames.map(async (filename) => {
-                const postResponse = await fetch(`posts/${filename}`);
+                const postResponse = await fetch(`${BASE_PATH}posts/${filename}`);
                 const markdown = await postResponse.text();
                 const { metadata, content } = parseFrontMatter(markdown);
                 
                 console.log('📝 Parsed post:', filename, metadata);
-                
+
                 return {
                     filename,
                     id: filename.replace('.md', ''),
