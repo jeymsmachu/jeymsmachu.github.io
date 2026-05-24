@@ -54,3 +54,39 @@ window.addEventListener('load', function() {
         }, 500);  // short delay to show loading
     }
 });
+
+// menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.querySelector('.js-menu-btn');
+    const menuPanel = document.querySelector('.menu-panel');
+    const menuContainer = document.querySelector('.menu');
+    
+    if (menuButton && menuPanel) {
+        menuButton.addEventListener('click', function() {
+            // toggle menu open state
+            menuPanel.classList.toggle('is-open');
+            menuContainer.classList.toggle('is-open');
+            
+            // stop/start scrolling when menu opens/closes
+            if (lenis) {
+                if (menuPanel.classList.contains('is-open')) {
+                    lenis.stop();
+                } else {
+                    lenis.start();
+                }
+            }
+        });
+        
+        // close menu when clicking on a link
+        const menuLinks = menuPanel.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuPanel.classList.remove('is-open');
+                menuContainer.classList.remove('is-open');
+                if (lenis) {
+                    lenis.start();
+                }
+            });
+        });
+    }
+});

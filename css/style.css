@@ -609,6 +609,7 @@ body.is-op-end {
     width: 100%;
     height: 2px;
     background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .menu-button-line:nth-child(1) {
@@ -630,6 +631,71 @@ body.is-op-end {
 .menu-button-text img {
     width: 100%;
     display: block;
+}
+
+/* menu panel */
+.menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 83, 232, 0.98);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.menu-panel.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu-panel-inner {
+    text-align: center;
+}
+
+.menu-panel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-panel-item {
+    margin: 30px 0;
+}
+
+.menu-panel-item a {
+    font-family: "Fredoka", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.menu-panel-item a:hover {
+    color: #ff88f1;
+}
+
+/* menu button state when menu is open */
+.menu.is-open .menu-button-line:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu.is-open .menu-button-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.is-open .menu-button-line:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .blog {
@@ -802,7 +868,7 @@ body.is-op-end {
     content: "";
     position: absolute;
     top: 50%;
-    right: 13%;
+    right: 8%;
     transform: translateY(-50%);
     width: 6px;
     height: 6px;
@@ -813,7 +879,7 @@ body.is-op-end {
 .more-button-text {
     font-family: "Fredoka", sans-serif;
     color: #fff;
-    font-size: 16px;
+    font-size: 19px;
     letter-spacing: 1px;
 }
 
@@ -1146,15 +1212,18 @@ body.is-op-end {
 
 /* Left arrow icon */
 .back-button-inner::before {
-    content: "←";
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 20px;
-    color: #2f53e8;
-    font-size: 20px;
-    transition: color 0.35s ease;
+    -webkit-mask: url('../img/icon/arrow_l.png') no-repeat center center;
+    mask: url('../img/icon/arrow_l.png') no-repeat center center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-color: #2f53e8;
+    transition: background-color 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .back-button-text {
