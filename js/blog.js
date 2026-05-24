@@ -92,7 +92,7 @@ function displayBlogPosts(posts) {
         
         listItem.innerHTML = `
             <div class="blog-list-content">
-                <a href="post.html?id=${post.id}" class="blog-list-box">
+                <a href="/post?id=${post.id}" class="blog-list-box">
                     
                     <div class="blog-list-head">
                         <div class="blog-list-head-num">Blog.${post.number}</div>
