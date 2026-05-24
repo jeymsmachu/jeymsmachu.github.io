@@ -1411,8 +1411,8 @@ body.is-op-end {
     left: 0;
     height: 100%;
     width: 20px;
-    -webkit-mask: url('../img/icon/arrow_l.png') no-repeat center center;
-    mask: url('../img/icon/arrow_l.png') no-repeat center center;
+    -webkit-mask: url('../img/icon/arrow_l.svg') no-repeat center center;
+    mask: url('../img/icon/arrow_l.svg') no-repeat center center;
     -webkit-mask-size: contain;
     mask-size: contain;
     background-color: #2f53e8;
