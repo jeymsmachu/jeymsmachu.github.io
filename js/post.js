@@ -84,14 +84,14 @@ function displayPost(metadata, htmlContent) {
             </div>
             <div class="post-detail-header-icons">
                 <div class="post-detail-header-icon">
-                    <img src="img/icon/tab_deco2.png" alt="">
+                    <img src="/img/icon/tab_deco2.png" alt="">
                 </div>
                 <div class="post-detail-header-icon">
-                    <img src="img/icon/tab_deco1.png" alt="">
+                    <img src="/img/icon/tab_deco1.png" alt="">
                 </div>
                 <div class="post-detail-header-icon">
-                    <a href="news.html">
-                        <img src="img/icon/tab_close.png" alt="close">
+                    <a href="/news/">
+                        <img src="/img/icon/tab_close.png" alt="close">
                     </a>
                 </div>
             </div>
@@ -119,7 +119,7 @@ function displayError(message) {
         <div class="post-detail-content" style="padding: 40px; text-align: center;">
             <p style="color: #2f53e8; font-size: 18px;">${message}</p>
             <p style="margin-top: 20px;">
-                <a href="news.html" style="color: #ff88f1;">← Back to list</a>
+                <a href="/news/" style="color: #ff88f1;">← Back to list</a>
             </p>
         </div>
     `;

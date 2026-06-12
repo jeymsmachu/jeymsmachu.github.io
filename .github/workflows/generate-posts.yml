@@ -21,19 +21,19 @@ jobs:
       - name: Generate posts list
         run: |
           cd posts
-          echo "[" > posts-list.json
-          first=true
-          for file in *.md; do
-            if [ "$file" != "*.md" ]; then
-              if [ "$first" = true ]; then
-                echo "  \"$file\"" >> posts-list.json
-                first=false
-              else
-                echo "  ,\"$file\"" >> posts-list.json
+          shopt -s nullglob
+          files=( *.md )
+          {
+            echo "["
+            for i in "${!files[@]}"; do
+              comma=","
+              if [ "$i" -eq "$(( ${#files[@]} - 1 ))" ]; then
+                comma=""
               fi
-            fi
-          done
-          echo "]" >> posts-list.json
+              printf '  "%s"%s\n' "${files[$i]}" "$comma"
+            done
+            echo "]"
+          } > posts-list.json
           
       - name: Commit and push if changed
         run: |
