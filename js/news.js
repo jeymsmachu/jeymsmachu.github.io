@@ -106,7 +106,7 @@ function displayNewsList(posts) {
         listItem.className = 'news-list-item';
         
         listItem.innerHTML = `
-            <a href="/post.html?id=${post.id}" class="news-list-link">
+            <a href="/post/?id=${post.id}" class="news-list-link">
                 <div class="news-list-date">${post.date}</div>
                 <div class="news-list-title">${post.title}</div>
             </a>
