@@ -1,7 +1,7 @@
 ---
 title: life update
 date: 2026.05.24
-number: 01
+number: 02
 tags: [update, self, life, skl, profanities]
 ---
 
