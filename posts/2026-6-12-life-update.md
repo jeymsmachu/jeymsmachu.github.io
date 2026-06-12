@@ -13,7 +13,9 @@ profanities and spoilers are **present** in this blog post. i provide this notic
 ## Nakamura-kun!!
 [Go for it! Nakamura!!](https://nakamura-kun.love) episode 12 fucked me over in so many ways i didn't even think was possible 😭😭 It was to bound to happen given it's an anime adaptation from the original manga BUT OHH MYYYY GODDDD BRO
 
-It reminds me of my first-year days, which I prefer not to talk about cause old me was young, dumb, and stupid (not to mention immature). But I think that's a canon event for all the young queer people.
+It reminds me of my first-year days, which I prefer not to talk about cause old me was young, dumb, and stupid (not to mention immature).
+
+Safe to say, what happened to Nakamura-kun is a canon event for young queer people and never have I ever felt so seen with this representation 🥹
 
 The suicide allegories were insane though, everyone collectively thought Nakamura's gonna jump over the railing, which thank god he didn't. I've been seeing AU's on Twitter where Nakamura jumped or something and Hirose having to live with the guilt ESPECIALLY SINCE HE CHICKENED OUT 😭
 
